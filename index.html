@@ -33,10 +33,9 @@
 </head>
 
 <body class="raleway-font px-2 container mx-auto">
-
     <main class="grid grid-cols-7">
         <!-- left side (seats)  -->
-        <section class="col-span-full md:col-span-5 p-2 md:p-4">
+        <section class="col-span-full md:col-span-5 p-2 md:p-4 cursor-pointer">
             <h2 class="text-xl sm:text-2xl font-semibold pb-1 md:pb-2">Select Your Seat</h2>
             <hr class="border-dashed text-third-color">
             <div class="flex justify-between items-center py-1 md:py-2">
@@ -301,23 +300,21 @@
             <div class="bg-primary-color px-2 md:px-5 py-2 md:py-3 rounded-lg mt-4">
                 <!-- static  -->
                 <div class="flex justify-between py-2 md:py-3">
-                    <p class="font-medium">Seat <span
-                            class="px-1 bg-final-color rounded-md text-white text-sm">10</span></p>
+                    <p class="font-medium">Seat <span id="seat-count"
+                            class="px-1 bg-final-color rounded-md text-white text-sm">0</span></p>
                     <p class="font-medium">Class</p>
                     <p class="font-medium">Price</p>
                 </div>
                 <hr class="border-dashed text-third-color">
                 <!-- dynamic  -->
-                <div class="flex justify-between py-2 md:py-3 text-third-color">
-                    <p>A1</p>
-                    <p>Economy</p>
-                    <p>550</p>
+                <div id="single-price-details">
+                    
                 </div>
                 <hr class="border-dashed text-third-color">
                 <!-- total  -->
                 <div class="flex justify-between py-2 md:py-3">
                     <p class="font-medium">Total Price</p>
-                    <p class="font-medium">BDT <span>1100</span></p>
+                    <p class="font-medium">BDT <span id="totalPrice">0</span></p>
                 </div>
 
                 <form action="" class="flex items-center gap-2">
@@ -329,7 +326,7 @@
                 <!-- total after discount -->
                 <div class="flex justify-between py-2 md:py-3">
                     <p class="font-medium">Grand Total</p>
-                    <p class="font-medium">BDT <span>1100</span></p>
+                    <p class="font-medium">BDT <span id="totalGrand">0</span></p>
                 </div>
             </div>
 
