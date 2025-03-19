@@ -308,7 +308,7 @@
                 <hr class="border-dashed text-third-color">
                 <!-- dynamic  -->
                 <div id="single-price-details">
-                    
+
                 </div>
                 <hr class="border-dashed text-third-color">
                 <!-- total  -->
@@ -318,9 +318,9 @@
                 </div>
 
                 <form action="" class="flex items-center gap-2">
-                    <input type="text" placeholder="Have any coupon?"
+                    <input id="couponInput" type="text" placeholder="Have any coupon?"
                         class="border-2 border-gray-200 bg-white rounded-md py-1 md:py-1.5 pl-4  input-succes" />
-                    <button
+                    <button id="apply-btn"
                         class="text-sm md:text-base bg-final-color px-2 md:px-4 py-1.5 text-white rounded-md">Apply</button>
                 </form>
                 <!-- total after discount -->
@@ -328,19 +328,21 @@
                     <p class="font-medium">Grand Total</p>
                     <p class="font-medium">BDT <span id="totalGrand">0</span></p>
                 </div>
+                <p id="no-discount" class="text-red-600 text-center font-medium"></p>
             </div>
 
             <form action="" class="px-2 py-2 md:py-4 grid">
                 <h2 class="text-base font-semibold pb-1 md:pb-2 ">Passenger Name*</h2>
-                <input type="text" placeholder="Enter your name"
+                <input id="inputName" required type="text" placeholder="Enter your name"
                     class="border-2 border-gray-200 bg-white rounded-md py-1 md:py-1.5 pl-4  input-succes" />
                 <h2 class="text-base font-semibold pb-1 md:pb-2 mt-2">Phone Number*</h2>
-                <input type="text" placeholder="Enter your phone number"
+                <input id="inputNumber" required type="text" placeholder="Enter your phone number"
                     class="border-2 border-gray-200 bg-white rounded-md py-1 md:py-1.5 pl-4 input-succes" />
                 <h2 class="text-base font-semibold pb-1 md:pb-2 mt-2">Email Address*</h2>
-                <input type="text" placeholder="Enter your email address"
+                <input id="inputMail" required type="text" placeholder="Enter your email address"
                     class="border-2 border-gray-200 bg-white rounded-md py-1 md:py-1.5 pl-4 input-succes" /> <br>
-                <button class="text-sm md:text-base bg-final-color py-1.5 text-white rounded-md">Next</button>
+                <button id="next-btn"
+                    class="text-sm md:text-base bg-final-color py-1.5 text-white rounded-md">Next</button>
 
             </form>
             <div class="text-gray-500 flex justify-between px-3"><small>Terms and Conditions</small>
