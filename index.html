@@ -8,10 +8,351 @@
     <!-- daisy ui and tailwind cdn  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font awesome cdn  -->
+    <script src="https://kit.fontawesome.com/a8e60d2571.js" crossorigin="anonymous"></script>
+    <!-- sweet alert cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- tailwind custom design  -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#F7F8F8',
+                        'secondary-color': '#0307120D',
+                        'third-color': '#03071280',
+                        'final-color': '#1DD100',
+
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <h1>hello boss</h1>
+<body class="raleway-font px-2 container mx-auto">
+
+    <main class="grid grid-cols-7">
+        <!-- left side (seats)  -->
+        <section class="col-span-full md:col-span-5 p-2 md:p-4">
+            <h2 class="text-xl sm:text-2xl font-semibold pb-1 md:pb-2">Select Your Seat</h2>
+            <hr class="border-dashed text-third-color">
+            <div class="flex justify-between items-center py-1 md:py-2">
+                <p class="flex-1 text-third-color sm:text-lg font-medium flex sm:gap-2"><img
+                        src="./assets/seat-gray.png" alt=""> Available</p>
+                <p class="text-third-color] sm:text-lg font-medium flex sm:gap-2"><img src="./assets/seat-green.png"
+                        alt=""> Selected</p>
+                <p></p>
+            </div>
+            <hr class="border-dashed text-secondary-color">
+
+            <!-- seats card  -->
+            <!-- driver seats  -->
+            <div class="mt-2 md:mt-4">
+                <div class="flex ">
+                    <div class=" py-2 px-3 md:px-5 bg-secondary-color rounded-md md:rounded-xl">
+                        <img class="w-6 md:w-8" src="./assets/wheel.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- passengers seats  -->
+            <div class="grid gap-2 md:gap-4 md:text-lg font-medium text-third-color mt-2 md:mt-4">
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            A1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            A2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            A3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            A4
+                        </div>
+                    </div>
+                </div>
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            B1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            B2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            B3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            B4
+                        </div>
+                    </div>
+                </div>
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            C1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            C2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            C3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            C4
+                        </div>
+                    </div>
+                </div>
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            D1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            D2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            D3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            D4
+                        </div>
+                    </div>
+                </div>
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            E1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            E2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            E3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            E4
+                        </div>
+                    </div>
+                </div>
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            F1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            F2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            F3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            F4
+                        </div>
+                    </div>
+                </div>
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            G1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            G2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            G3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            G4
+                        </div>
+                    </div>
+                </div>
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            H1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            H2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            H3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            H4
+                        </div>
+                    </div>
+                </div>
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            I1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            I2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            I3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            I4
+                        </div>
+                    </div>
+                </div>
+                <!-- single line  -->
+                <div class="flex justify-between items-center">
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            J1
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            J2
+                        </div>
+                    </div>
+                    <div class="flex gap-2 md:gap-4">
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            J3
+                        </div>
+                        <div
+                            class="single-seat py-2 md:py-2.5 px-3 md:px-6 bg-secondary-color rounded-md md:rounded-xl">
+                            J4
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Right side  -->
+        <section class="col-span-full md:col-span-2 p-2 md:p-4 md:border-l-2 border-dashed">
+            <h2 class="text-xl sm:text-2xl font-semibold pb-1 md:pb-2">Select Your Seat</h2>
+            <hr class="border-dashed text-third-color">
+            <!-- dynamic price count -->
+            <div class="bg-primary-color px-2 md:px-5 py-2 md:py-3 rounded-lg mt-4">
+                <!-- static  -->
+                <div class="flex justify-between py-2 md:py-3">
+                    <p class="font-medium">Seat <span
+                            class="px-1 bg-final-color rounded-md text-white text-sm">10</span></p>
+                    <p class="font-medium">Class</p>
+                    <p class="font-medium">Price</p>
+                </div>
+                <hr class="border-dashed text-third-color">
+                <!-- dynamic  -->
+                <div class="flex justify-between py-2 md:py-3 text-third-color">
+                    <p>A1</p>
+                    <p>Economy</p>
+                    <p>550</p>
+                </div>
+                <hr class="border-dashed text-third-color">
+                <!-- total  -->
+                <div class="flex justify-between py-2 md:py-3">
+                    <p class="font-medium">Total Price</p>
+                    <p class="font-medium">BDT <span>1100</span></p>
+                </div>
+
+                <form action="" class="flex items-center gap-2">
+                    <input type="text" placeholder="Have any coupon?"
+                        class="border-2 border-gray-200 bg-white rounded-md py-1 md:py-1.5 pl-4  input-succes" />
+                    <button
+                        class="text-sm md:text-base bg-final-color px-2 md:px-4 py-1.5 text-white rounded-md">Apply</button>
+                </form>
+                <!-- total after discount -->
+                <div class="flex justify-between py-2 md:py-3">
+                    <p class="font-medium">Grand Total</p>
+                    <p class="font-medium">BDT <span>1100</span></p>
+                </div>
+            </div>
+
+            <form action="" class="px-2 py-2 md:py-4 grid">
+                <h2 class="text-base font-semibold pb-1 md:pb-2 ">Passenger Name*</h2>
+                <input type="text" placeholder="Enter your name"
+                    class="border-2 border-gray-200 bg-white rounded-md py-1 md:py-1.5 pl-4  input-succes" />
+                <h2 class="text-base font-semibold pb-1 md:pb-2 mt-2">Phone Number*</h2>
+                <input type="text" placeholder="Enter your phone number"
+                    class="border-2 border-gray-200 bg-white rounded-md py-1 md:py-1.5 pl-4 input-succes" />
+                <h2 class="text-base font-semibold pb-1 md:pb-2 mt-2">Email Address*</h2>
+                <input type="text" placeholder="Enter your email address"
+                    class="border-2 border-gray-200 bg-white rounded-md py-1 md:py-1.5 pl-4 input-succes" /> <br>
+                <button class="text-sm md:text-base bg-final-color py-1.5 text-white rounded-md">Next</button>
+
+            </form>
+            <div class="text-gray-500 flex justify-between px-3"><small>Terms and Conditions</small>
+                <small>Cancellation Policy</small>
+            </div>
+        </section>
+    </main>
+    <script src="./utilities/utilities.js"></script>
+    <script src="./script/app.js"></script>
 </body>
 
 </html>
